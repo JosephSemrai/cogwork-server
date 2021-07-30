@@ -63,7 +63,7 @@ app.get("/process", async (req, res) => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: "Bearer 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"
+          Authorization: "Bearer " + process.env.GPT_KEY
         },
         body: JSON.stringify({
           prompt: gptProvidedContext + question,
